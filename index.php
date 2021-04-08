@@ -42,9 +42,8 @@ if (empty($string) || time() - $data->timestamp > 3600) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.82.0">
-    <title>Starter Template · Bootstrap v5.0</title>
+    <meta name="author" content="Trueforce Security Inc.">
+    <title>Corona in Flensburg und Umgebung</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -122,8 +121,10 @@ if (empty($string) || time() - $data->timestamp > 3600) {
             <span class="danger-high">⬤</span> unter 100 oder <span class="danger-extreme">⬤</span> über 100</span>
         </div>
         <div class="mt-4">
-            &copy; <?= date("Y", time()) ?> &middot;
-            <a href="https://api.corona-zahlen.org/docs/#endpoints" target="_blank">Datenquelle</a>
+            &copy; <?= date("Y", time()) ?>
+            &middot; <a href="https://api.corona-zahlen.org/docs/#endpoints" target="_blank">Datenquelle</a>
+            &middot; <a href="https://github.com/MasterPuffin/Flensburg-Corona" target="_blank">Quellcode</a>
+            &middot; <a href="https://www.trueforce.ca/impressum" target="_blank">Impressum</a>
         </div>
     </footer>
 </div>
