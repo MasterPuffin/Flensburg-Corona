@@ -42,13 +42,18 @@ if (empty($string) || time() - $data->timestamp > 3600) {
 
 
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Dashboard für aktuelle Coronazahlen in Flensburg und Umgebung">
     <meta name="author" content="Trueforce Security Inc.">
     <title>Corona in Flensburg und Umgebung</title>
+
+    <meta name="keywords" content="Corona, Flensburg, Deutschland, RKI, COVID, COVID-19, Dashboard" />
+
+    <link rel="shortcut icon" href="icon.png" />
+    <link rel="apple-touch-icon" href="icon.png" />
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
