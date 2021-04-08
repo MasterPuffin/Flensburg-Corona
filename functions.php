@@ -9,11 +9,18 @@ function curl(string $url) {
     return $result;
 }
 
-function fround(float $num) {
-    return round($num, 2);
+function fround(?float $num) {
+    if (is_null($num)) {
+        return "-";
+    } else {
+        return round($num, 2);
+    }
 }
 
-function color(float $num) {
+function color(?float $num) {
+    if (is_null($num)) {
+        return "";
+    }
     if ($num > 100) {
         return "danger-extreme";
     } elseif ($num > 50) {

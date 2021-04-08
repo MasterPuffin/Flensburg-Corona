@@ -19,7 +19,11 @@ if (empty($string) || time() - $data->timestamp > 3600) {
 
 
     $result = json_decode(curl("https://api.corona-zahlen.org/vaccinations"));
-    $vac = $result->data->quote;
+    if (!empty($result->error)) {
+        $vac = NULL;
+    } else {
+        $vac = $result->data->quote;
+    };
 
     $data = array(
         "timestamp" => time(),
@@ -32,9 +36,10 @@ if (empty($string) || time() - $data->timestamp > 3600) {
     );
 
     file_put_contents("data.json", json_encode($data));
+    $data = (object) $data;
 }
-
 ?>
+
 
 <!doctype html>
 <html lang="en">
@@ -93,7 +98,7 @@ if (empty($string) || time() - $data->timestamp > 3600) {
         </div>
         <div class="col-md-4 mt-4 mt-md-0">
             <h5>Deutschland</h5>
-            <h3><?= round($data->vac * 100, 2) ?>%</h3>
+            <h3><?= is_null($data->vac) ? "-" : (round($data->vac * 100, 2) . "%") ?></h3>
             Erste Impfung
         </div>
     </div>
