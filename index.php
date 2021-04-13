@@ -49,7 +49,7 @@ if (empty($string) || time() - $data->timestamp > 3600) {
     <meta name="author" content="Trueforce Security Inc.">
     <title>Corona in Flensburg und Umgebung</title>
 
-    <meta name="keywords" content="Corona, Flensburg, Deutschland, RKI, COVID, COVID-19, Dashboard" />
+    <meta name="keywords" content="Corona, Flensburg, Deutschland, RKI, COVID, COVID-19, Dashboard, Zahlen, Data, Urlaub, Förde, Ostsee" />
 
     <link rel="shortcut icon" href="icon.png" />
     <link rel="apple-touch-icon" href="icon.png" />
