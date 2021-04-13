@@ -1,6 +1,5 @@
 <?php
 require_once "functions.php";
-
 $string = file_get_contents("data.json");
 $data = json_decode($string);
 if (empty($string) || time() - $data->timestamp > 3600) {
@@ -103,7 +102,7 @@ if (empty($string) || time() - $data->timestamp > 3600) {
         </div>
         <div class="col-md-4 mt-4 mt-md-0">
             <h5>Deutschland</h5>
-            <h3><?= is_null($data->vac) ? "-" : (round($data->vac * 100, 2) . "%") ?></h3>
+            <h3><?= is_null($data->vac) ? "-" : (fround($data->vac*100) . "%") ?></h3>
             Erste Impfung
         </div>
     </div>

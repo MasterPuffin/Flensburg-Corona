@@ -1,6 +1,6 @@
 <?php
 
-function curl(string $url) {
+function curl(string $url): string {
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -9,15 +9,15 @@ function curl(string $url) {
     return $result;
 }
 
-function fround(?float $num) {
+function fround(?float $num): string {
     if (is_null($num)) {
         return "-";
     } else {
-        return round($num, 2);
+        return str_replace(".", ",", number_format($num, 2));
     }
 }
 
-function color(?float $num) {
+function color(?float $num): string {
     if (is_null($num)) {
         return "";
     }
